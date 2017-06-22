@@ -1,24 +1,128 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+﻿<div id="contentwrapper">
+  <div id="maincol575">
+    <div id="maincontent">
+      <!-- skip nav anchor -->
+      <a name="skipnav" id="skipnav"></a>
+      <!-- InstanceBeginEditable name="content" -->
+
+
+        <style>
+          .Space label {
+            margin-left: 5px;
+          }
+        </style>
+        <div class="align-self-center" id="SearchAddress" aria-label="Address search">
+          This div will contain the search input and search button; the input field will not clear, 
+          so the user can see what address/parcel number was looked up.
+          If parcel number is used for search, the address associated with that parcel may be displayed
+          if one has been assigned to it.
+          <div class="input-group AddressSearchBar d-flex align-self-center" id="AddressSearchBar">
+            <input id="AddressSearchInput" type="search" class="input-group-field" placeholder="   Address or Parcel Number" />
+
+              <button type="button" id="AddressSearchButton" class="button" value="Search..." required >Search...</button>
+
+          </div>
+        </div>
+        <div id="Commissioners">
+          <b>Commissioners for District <span id="CommissionerDistrict">5</span></b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li>
+              BCC Commissioner
+              <ul style="list-style-type:none;margin-top:5px;">
+                <li><a href="#" id="BCCCommURL" target="_blank"><span id="BCCCommissionerName">John Smith</span></a><br></li>
+              </ul>
+              School Board Commissioner
+              <ul style="list-style-type:none;margin-top:5px;">
+                <li><a href="#" id="SchoolCommURL" target="_blank"><span id="SchoolCommissionerName">Jane Smith</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="Schools">
+          <b>Schools</b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li>
+              Elementary School
+              <ul style="list-style-type:none;margin-top:5px;">
+                <li><a href="#" id="ElementarySchoolURL" target="_blank"><span id="ElementarySchoolName">Sherlock Elementary School</span></a></li>
+                <li><a href="#" id="ElementaryAddressURL" target="_blank"><span id="ElementarySchoolAddress">1455 North Whitney St</span></a></li>
+                <li><span id="ElementarySchoolCity">Jacksonville</span>, <span id="ElementarySchoolZip">32084</span><br></li>
+              </ul>
+              Middle School
+              <ul style="list-style-type:none;margin-top:5px;">
+                <li><a href="#" id="MiddleSchoolURL" target="_blank"><span id="MiddleSchoolName">Sebastian</span></a></li>
+                <li><a href="#" id="MiddleAddressURL" target="_blank"><span id="MiddleSchoolAddress">2955 Lewis Speedway</span></a></li>
+                <li><span id="MiddleSchoolCity">Jacksonville</span>, <span id="MiddleSchoolZip">32084</span><br></li>
+
+              </ul>
+              High School
+              <ul style="list-style-type:none;margin-top:5px;">
+                <li><a href="#" id="HighSchoolURL" target="_blank"><span id="HighSchoolName">Jacksonville</span></a></li>
+                <li><a href="#" id="HighAddressURL" target="_blank"><span id="HighSchoolAddress">3205 Varella Ave</span></a></li>
+                <li><span id="HighSchoolCity">Jacksonville</span>, <span id="HighSchoolZip">32084</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="Election">
+          <b>Election Precinct <span id="ElectionPrecinct">502</span></b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li><span id="ElectionPrecinctName">Duval Voting Center</span></li>
+            <li><a href="#" id="ElectionPrecinctURL" target="_blank"><span id="ElectionPrecinctAddress">1112 State Road 16</span></a></li>
+          </ul>
+        </div>
+
+        <div id="Utilities">
+          <b>Utilities</b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li><span id="UtilCompany">Clay COunty Utilities</span></li>
+          </ul>
+        </div>
+
+        <div id="FloridaSenate">
+          <b>Florida Senate<span id="Span1"></span></b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li><a href="#" id="FLSenateURL" target="_blank">District <span id="FLSenateDistrict">7</span></a></li>
+          </ul>
+        </div>
+
+        <div id="FireStation">
+          <b>Fire Station<span id="Span2"></span></b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li><a href="#" id="FireStationURL" target="_blank">Station <span id="FireStationNumber">12</span></a><br></li>
+
+          </ul>
+        </div>
+
+        <div id="SheriffDiv">
+          <b>Sheriff District<span id="Span3"></span></b>
+          <ul style="list-style-type:none;margin-top:5px;">
+            <li><span id="SheriffDistrictSpan">NE</span> District<br></li>
+            <li><span id="SheriffCommanderSpan">Commander Nottingham</span><br></li>
+            <li><a href="mailto:jeremy.west@claycountygov.com" id="SheriffEmailURL" target="_blank"><span id="SheriffEmailSpan">bharrington@sjso.org   </span></a><br></li>
+          </ul>
+
+        </div>
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("UA-7541158-1");
+          pageTracker._trackPageview();
+        } catch (err) { }</script>
+
+      <!-- InstanceEndEditable -->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
+    <!-- InstanceBeginEditable name="footer" -->
+
+
+    <!-- InstanceEndEditable -->
+  </div>
+  <!--end mainwide wrapper-->
+  <!-- start sb container -->
+ 
+  <!-- end sidebar -->
 </div>

@@ -1,12 +1,21 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html, body {
+  width: 100%;
+  background-color: gainsboro;
+  background-color: rgba(255,255,255,1);
+  background-image: linear-gradient(top, cadetblue, cadetblue 5%, transparent 30%);
+  background-image: -webkit-linear-gradient(top, cadetblue, cadetblue 5%, transparent 30%);
+  background: -moz-linear-gradient(top, cadetblue, cadetblue 5%, transparent 30%); /* FF3.6+ */
+  background: -webkit-gradient(top, cadetblue, cadetblue 5%, transparent 30%); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, cadetblue, cadetblue 5%, transparent 30%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, cadetblue, cadetblue 5%, transparent 30%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #5f9ea0 0%,#5f9ea0 5%, transparent 30%); /* IE10+ */
 }
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -14,4 +23,34 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+#contentwrapper{
+background-color: white;
+border: 1px solid black;
+padding:2rem;
+max-width:960px;
+min-width: 332px;
+
+margin: 0 3rem 1rem 0;
+}
+footer p {
+  padding-left: 2em;
+}
+div .input-group-btn{
+  background-color: cadetblue;
+  height:30px;
+  width: 75px;
+}
+.AddressSearchBar {
+  margin: 0 auto;
+
+}
+#AddressSearchButton{
+  border:none;
+  background-color: cadetblue;
+}
+
+#AddressSearchInput{
+  border: 1px lightgray solid;
+  width: 245px
 }

@@ -8,25 +8,28 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" >
-      <h3>Clay County</h3>
-      <h5>Address Information Viewer</h5>
-        <div class="container">
-            <div class="navbar">
 
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
-            </div>
+    <div class="container">
+
+      <div class="Title flex-row d-flex">
+        <h3 class=" col-lg-3 col-md-4 col-sm-12 CountyHeading ">Clay County</h3>
+        <h5 class="col-lg-5 col-md-5 col-sm-12 AppName align-middle">Address Information Viewer</h5>
+      </div>
+      <div class="navbar">
+       
+        <div class=" ">
+          <ul class="nav navbar-nav InfoViewerNav flex-row navbar-collapse">
+            <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+          </ul>
         </div>
+      </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
 
-    </div>
+  <div class="container body-content">
+    @RenderBody()
+
+  </div>   
   <hr />
   <footer>
     <p>@DateTime.Now.Year - Clay County Address Information Viewer</p>
